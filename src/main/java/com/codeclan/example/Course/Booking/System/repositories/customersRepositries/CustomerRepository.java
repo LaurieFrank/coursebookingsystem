@@ -1,4 +1,4 @@
-package com.codeclan.example.Course.Booking.System.repositories;
+package com.codeclan.example.Course.Booking.System.repositories.customersRepositries;
 
 import com.codeclan.example.Course.Booking.System.models.Course;
 import com.codeclan.example.Course.Booking.System.models.Customer;
@@ -8,5 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface CustomerRepository extends JpaRepository<Customer, Long> {
+public interface CustomerRepository extends JpaRepository<Customer, Long>, CustomisedCustomerRepository {
+
 }

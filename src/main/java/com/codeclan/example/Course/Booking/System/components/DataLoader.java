@@ -5,7 +5,7 @@ import com.codeclan.example.Course.Booking.System.models.Course;
 import com.codeclan.example.Course.Booking.System.models.Customer;
 import com.codeclan.example.Course.Booking.System.repositories.BookingRepository;
 import com.codeclan.example.Course.Booking.System.repositories.coursesRepositories.CourseRepository;
-import com.codeclan.example.Course.Booking.System.repositories.CustomerRepository;
+import com.codeclan.example.Course.Booking.System.repositories.customersRepositries.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

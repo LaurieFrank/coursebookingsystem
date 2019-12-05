@@ -4,7 +4,7 @@ import com.codeclan.example.Course.Booking.System.models.Course;
 import com.codeclan.example.Course.Booking.System.models.Customer;
 import com.codeclan.example.Course.Booking.System.repositories.BookingRepository;
 import com.codeclan.example.Course.Booking.System.repositories.coursesRepositories.CourseRepository;
-import com.codeclan.example.Course.Booking.System.repositories.CustomerRepository;
+import com.codeclan.example.Course.Booking.System.repositories.customersRepositries.CustomerRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -40,6 +40,12 @@ class CourseBookingSystemApplicationTests {
 	public void canFindAllCustomersByCourse(){
 		List<Customer> foundCustomers = courseRepository.findAllCustomersByCourse(1L);
 		assertEquals(2, foundCustomers.size());
+	}
+
+	@Test
+	public void canFindAllCoursesByCustomer(){
+		List<Course> foundCourse = customerRepository.findAllCoursesByCustomer(1L);
+		assertEquals(1, foundCourse.size());
 	}
 
 }
