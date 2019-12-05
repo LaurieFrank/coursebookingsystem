@@ -12,7 +12,7 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "date");
+    @Column(name = "date")
     private String date;
 
     @JsonIgnoreProperties("bookings")
