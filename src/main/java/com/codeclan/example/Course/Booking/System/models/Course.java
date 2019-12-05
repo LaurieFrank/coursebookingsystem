@@ -14,8 +14,8 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "course_name")
+    private String courseName;
 
     @Column(name = "town")
     private String town;
@@ -27,8 +27,8 @@ public class Course {
     @OneToMany(mappedBy = "course")
     private List<Booking> bookings;
 
-    public Course(String name, String town, int rating) {
-        this.name = name;
+    public Course(String courseName, String town, int rating) {
+        this.courseName = courseName;
         this.town = town;
         this.rating = rating;
         this.bookings = new ArrayList<>();
@@ -47,11 +47,11 @@ public class Course {
     }
 
     public String getName() {
-        return name;
+        return courseName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.courseName = name;
     }
 
     public String getTown() {
